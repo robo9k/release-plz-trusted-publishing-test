@@ -35,6 +35,8 @@ jobs:
           command: release
           options: --dry-run
           verbose: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   release-plz-release:
     name: "release-plz release"
