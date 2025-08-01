@@ -44,7 +44,7 @@ jobs:
     permissions:
       id-token: write
     needs: release-plz-release-dryrun
-    if: needs.release-plz-release-dryrun.outputs.releases-created
+    if: needs.release-plz-release-dryrun.outputs.releases-created == 'true'
     environment:
       name: staging.crates.io
       url: https://staging.crates.io/crates/g4nz32jmk
